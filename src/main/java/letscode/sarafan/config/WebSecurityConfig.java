@@ -21,10 +21,19 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http
+                .antMatcher("/**")
                 .authorizeRequests()
-                .mvcMatchers("/").permitAll()
-                .anyRequest().authenticated()
-                .and().csrf().disable();
+                .antMatchers("/", "/login**", "/js/**", "/error**")
+                .permitAll()
+                .anyRequest()
+                .authenticated()
+                .and()
+                .logout()
+                .logoutSuccessUrl("/")
+                .permitAll()
+                .and()
+                .csrf()
+                .disable();
     }
 
     //For testing now I create new user with MAP. Need re-wright
