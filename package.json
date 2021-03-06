@@ -1,0 +1,35 @@
+{
+  "name": "sarafan-addjpa",
+  "version": "1.0.0",
+  "description": "Restfull application with using Spring Boot and Vue",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SemionRutshtein/sarafan_application.git"
+  },
+  "author": "Semion Rutshtein",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SemionRutshtein/sarafan_application/issues"
+  },
+  "homepage": "https://github.com/SemionRutshtein/sarafan_application#readme",
+  "dependencies": {
+    "vue": "^2.6.12",
+    "vue-resource": "^1.5.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.13.8",
+    "@babel/preset-env": "^7.13.9",
+    "babel-loader": "^8.2.2",
+    "vue-loader": "^15.9.6",
+    "vue-template-loader": "^1.1.0",
+    "vue-template-compiler": "^2.5.17",
+    "webpack": "^5.24.3",
+    "webpack-cli": "^4.5.0",
+    "webpack-dev-server": "^3.11.2"
+  }
+}
