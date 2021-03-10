@@ -36,6 +36,7 @@ dependencies {
 	
 	compile("org.springframework.boot:spring-boot-starter-thymeleaf")
 	compile('org.springframework.session:spring-session-jdbc')
+	compile("org.springframework.boot:spring-boot-starter-websocket")
 
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 }
