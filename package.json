@@ -4,8 +4,7 @@
   "description": "Restfull application with using Spring Boot and Vue",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "webpack-dev-server"
   },
   "repository": {
     "type": "git",
@@ -18,16 +17,19 @@
   },
   "homepage": "https://github.com/SemionRutshtein/sarafan_application#readme",
   "dependencies": {
-    "@stomp/stompjs": "^6.1.0",
-    "sockjs-client": "^1.5.0",
-    "vue": "^2.6.12",
-    "vue-resource": "^1.5.2"
+    "@stomp/stompjs": "^5.0.0-beta.3",
+    "sockjs-client": "^1.3.0",
+    "vue": "^2.5.17",
+    "vue-resource": "^1.5.1",
+    "vuetify": "^1.3.5"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0",
     "@babel/preset-env": "^7.0.0",
     "babel-loader": "^8.0.2",
+    "css-loader": "^1.0.1",
     "vue-loader": "^15.4.1",
+    "vue-style-loader": "^4.1.2",
     "vue-template-compiler": "^2.5.17",
     "webpack": "^4.17.2",
     "webpack-cli": "^3.1.0",

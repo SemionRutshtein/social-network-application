@@ -1,10 +1,15 @@
 import Vue from 'vue'
 import VueResource from 'vue-resource'
-import App from 'pages/App.vue'
-import {connect} from './util/ws'
+import Vuetify from 'vuetify'
+import App from '/media/semion/D/idea-projects/db-sarafan-app/sarafan-AddJPA/src/main/resources/static/js/pages/App.vue'
+import { connect } from './util/ws'
+import 'vuetify/dist/vuetify.min.css'
 
-connect()
+if (frontendData.profile) {
+    connect()
+}
 
+Vue.use(Vuetify)
 Vue.use(VueResource)
 
 new Vue({
