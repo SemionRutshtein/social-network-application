@@ -1,9 +1,9 @@
-import Vue from "vue"
+import Vue from 'vue'
 
 const messages = Vue.resource('/message{/id}')
 
 export default {
-    add: message => messages.save( {}, message),
-    update: message => messages.update({id: message.id}, messages),
-    remove: id => messages.remove({id: id})
+    add: message => messages.save({}, message),
+    update: message => messages.update({id: message.id}, message),
+    remove: id => messages.remove({id})
 }

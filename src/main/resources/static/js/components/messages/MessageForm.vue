@@ -10,7 +10,6 @@
         </v-btn>
     </v-layout>
 </template>
-
 <script>
     import { mapActions } from 'vuex'
     export default {
@@ -47,5 +46,4 @@
 </script>
 
 <style>
-
 </style>
