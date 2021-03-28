@@ -20,7 +20,6 @@ public class MainController {
     @Value("${spring.profile.active}")
     private String profile;
 
-
     @Autowired
     public MainController(MessageRepo messageRepo) {
         this.messageRepo = messageRepo;
