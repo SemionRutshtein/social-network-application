@@ -6,8 +6,6 @@ import letscode.sarafan.domain.Views;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
-import javax.swing.text.View;
-
 @Data
 @AllArgsConstructor
 @JsonView(Views.Id.class)

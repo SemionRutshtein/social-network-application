@@ -4,12 +4,14 @@
                 label="New message"
                 placeholder="Write something"
                 v-model="text"
+                @keyup.enter="save"
         />
         <v-btn @click="save">
             Save
         </v-btn>
     </v-layout>
 </template>
+
 <script>
     import { mapActions } from 'vuex'
     export default {

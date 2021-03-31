@@ -1,19 +1,21 @@
 package letscode.sarafan.controller;
 
 import com.fasterxml.jackson.annotation.JsonView;
-import letscode.sarafan.domain.Message;
-import letscode.sarafan.domain.Views;
-import letscode.sarafan.dto.EventType;
 import letscode.sarafan.dto.MetaDto;
-import letscode.sarafan.dto.ObjectType;
 import letscode.sarafan.repo.MessageRepo;
 import letscode.sarafan.util.WsSender;
+import letscode.sarafan.domain.Message;
+import letscode.sarafan.domain.User;
+import letscode.sarafan.domain.Views;
+import letscode.sarafan.dto.EventType;
+import letscode.sarafan.dto.ObjectType;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.web.bind.annotation.*;
 
 import java.io.IOException;
@@ -56,9 +58,10 @@ public class MessageController {
     }
 
     @PostMapping
-    public Message create(@RequestBody Message message) throws IOException {
+    public Message create(@RequestBody Message message, @AuthenticationPrincipal User user) throws IOException {
         message.setCreationDate(LocalDateTime.now());
         fillMeta(message);
+        message.setAuthor(user);
         Message updatedMessage = messageRepo.save(message);
 
         wsSender.accept(EventType.CREATE, updatedMessage);
